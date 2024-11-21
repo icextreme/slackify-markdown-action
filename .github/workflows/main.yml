@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Convert
         id: convert
@@ -28,8 +28,10 @@ jobs:
 
             [Link](http://example.com)
 
-            * List Item 1
-            * List Item 2
+            - List Item 1
+            - List Item 2
+            - \[x\] List Item 3
+            - \[ \] List Item 4
 
       - name: Verify
         shell: bash
@@ -44,6 +46,8 @@ jobs:
 
             •   List Item 1
             •   List Item 2
+            •   [x] List Item 3
+            •   [ ] List Item 4
         run: |
           if [ "$ACTUAL" != "$EXPECTED" ]; then
             echo "Actual: '$ACTUAL'"
@@ -57,11 +61,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Release
         id: release
-        uses: cycjimmy/semantic-release-action@v2
+        uses: cycjimmy/semantic-release-action@v4
         with:
           semantic_version: 19
           extra_plugins: |
