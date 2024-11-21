@@ -30,6 +30,7 @@ jobs:
 
             * List Item 1
             * List Item 2
+            - [x] List Item 3
 
       - name: Verify
         shell: bash
@@ -44,6 +45,7 @@ jobs:
 
             •   List Item 1
             •   List Item 2
+            •   [x] List Item 3
         run: |
           if [ "$ACTUAL" != "$EXPECTED" ]; then
             echo "Actual: '$ACTUAL'"
