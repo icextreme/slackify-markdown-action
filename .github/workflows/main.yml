@@ -28,8 +28,8 @@ jobs:
 
             [Link](http://example.com)
 
-            * List Item 1
-            * List Item 2
+            - List Item 1
+            - List Item 2
             - [x] List Item 3
 
       - name: Verify
